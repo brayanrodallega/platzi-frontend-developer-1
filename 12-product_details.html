@@ -49,7 +49,7 @@
         padding: 12px;
         border-radius: 50%;
       }
-      .product-detail-close:hover{
+      .product-detail-close:hover {
         cursor: pointer;
       }
       .product-detail > img:nth-child(2) {
@@ -57,6 +57,21 @@
         height: 360px;
         object-fit: cover;
         border-radius: 0 0 20px 20px;
+      }
+      .dots {
+        text-align: center;
+      }
+      .dot {
+        cursor: pointer;
+        height: 8px;
+        width: 8px;
+        margin: 0 2px;
+        background-color: var(--very-light-pink);
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .dots span:nth-child(1) {
+        background-color: var(--hospital-green);
       }
       .product-info {
         margin: 24px 24px 0 24px;
@@ -80,49 +95,58 @@
         color: var(--very-light-pink);
       }
       .primary-button {
-            background-color: var(--hospital-green);
-            border-radius: 8px;
-            border: none;
-            color: var(--white);
-            width: 100%;
-            cursor: pointer;
-            font-size: var(--md);
-            font-weight: bold;
-            height: 50px;
+        background-color: var(--hospital-green);
+        border-radius: 8px;
+        border: none;
+        color: var(--white);
+        width: 100%;
+        cursor: pointer;
+        font-size: var(--md);
+        font-weight: bold;
+        height: 50px;
+      }
+      .add-to-cart-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 640px) {
+        .product-detail {
+          width: 100%;
         }
-        .add-to-cart-button {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        @media (max-width: 640px) {
-            .product-detail {
-                width: 100%;
-            }
-        }
+      }
     </style>
   </head>
   <body>
     <aside class="product-detail">
+      <div class="product-detail-close">
+        <img src="./icons/icon_close.png" alt="close" />
+      </div>
 
-        <div class="product-detail-close">
-            <img src="./icons/icon_close.png" alt="close">
-        </div>
+      <img
+        src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+        alt="bike"
+      />
 
-        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike">
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
 
-        <div class="product-info">
-            <p>$35,00</p>
-            <p>Bike</p>
-            <p>With its practical position this bike also fulfills a decorative funcion, add your hall or workspace.</p>
+      <div class="product-info">
+        <p>$35,00</p>
+        <p>Bike</p>
+        <p>
+          With its practical position this bike also fulfills a decorative
+          funcion, add your hall or workspace.
+        </p>
 
-            <button class="primary-button add-to-cart-button">
-                <img src="./icons/bt_add_to_cart.svg" alt="add to cart">
-                Add to cart
-            </button>
-
-        </div>
-
+        <button class="primary-button add-to-cart-button">
+          <img src="./icons/bt_add_to_cart.svg" alt="add to cart" />
+          Add to cart
+        </button>
+      </div>
     </aside>
   </body>
 </html>
